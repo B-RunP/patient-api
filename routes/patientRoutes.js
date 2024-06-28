@@ -3,6 +3,7 @@ const router = express.Router();
 const patientController = require("../controllers/patientController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
+// rute REST API data pasien
 router.get("/", authMiddleware.authenticateJWT, patientController.getPatients);
 router.post("/", authMiddleware.authenticateJWT, patientController.addPatient);
 router.get(

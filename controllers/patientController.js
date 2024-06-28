@@ -1,5 +1,6 @@
 const pool = require("../dbConfig");
 
+// fungsi get data pasien
 exports.getPatients = (req, res) => {
   pool.query("SELECT * FROM patients", (err, results) => {
     if (err) {
@@ -9,6 +10,7 @@ exports.getPatients = (req, res) => {
   });
 };
 
+// fungsi tambah data pasien
 exports.addPatient = (req, res) => {
   const { name, gender, age, address, diagnosis, treatment } = req.body;
   const query =
@@ -25,6 +27,7 @@ exports.addPatient = (req, res) => {
   );
 };
 
+// fungsi get data pasien by id
 exports.getPatientById = (req, res) => {
   const { id } = req.params;
   pool.query("SELECT * FROM patients WHERE id = ?", [id], (err, results) => {
@@ -38,6 +41,7 @@ exports.getPatientById = (req, res) => {
   });
 };
 
+// fungsi update data pasien
 exports.updatePatient = (req, res) => {
   const { id } = req.params;
   const { name, gender, age, address, diagnosis, treatment } = req.body;
@@ -59,6 +63,7 @@ exports.updatePatient = (req, res) => {
   );
 };
 
+// fungsi hapus data pasien
 exports.deletePatient = (req, res) => {
   const { id } = req.params;
   pool.query("DELETE FROM patients WHERE id = ?", [id], (err, results) => {
