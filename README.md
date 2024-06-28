@@ -4,6 +4,7 @@ Project ini merupakan REST API data pasien yang memiliki fitur login dan registe
 - Dokumentasi API : https://documenter.getpostman.com/view/31366669/2sA3dsnuUY
 - Tampilan Frontend (masih pengembangan) : https://crud-patient.vercel.app/
 - CORS = http://localhost:5173/ & https://crud-patient.vercel.app/
+- Repositori Frontend : https://github.com/B-RunP/crud-patient
 
 Jika dijalankan di local : 
 - URL API : http://localhost:5000/
