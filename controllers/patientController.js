@@ -42,12 +42,13 @@ exports.updatePatient = (req, res) => {
   const { id } = req.params;
   const { name, gender, age, address, diagnosis, treatment } = req.body;
   const query =
-    "UPDATE patients SET name = ?, gender = ?, age = ?, address = ?, diagnosis = ?, treatment = ?, WHERE id = ?";
+    "UPDATE patients SET name = ?, gender = ?, age = ?, address = ?, diagnosis = ?, treatment = ? WHERE id = ?";
   pool.query(
     query,
     [name, gender, age, address, diagnosis, treatment, id],
     (err, results) => {
       if (err) {
+        console.error("Database update error: ", err);
         return res.status(500).json({ error: "Failed to update patient" });
       }
       if (results.affectedRows === 0) {
