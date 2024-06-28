@@ -3,3 +3,4 @@ Project ini merupakan REST API data pasien yang memiliki fitur login dan registe
 - URL API : https://patient-api-three.vercel.app/
 - Dokumentasi API : https://documenter.getpostman.com/view/31366669/2sA3dsnuUY
 - Tampilan Frontend (masih pengembangan) : https://crud-patient.vercel.app/
+- CORS = http://localhost:5173/ & https://crud-patient.vercel.app/
